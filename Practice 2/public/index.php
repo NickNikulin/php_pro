@@ -2,11 +2,9 @@
 
 include "../engine/Autoload.php";
 
-function __autoload($className) {
-    (new Autoload())->loadclass($className);
-}
+spl_autoload_register([new Autoload(), 'loadclass']);
 
-$product = new Product();
+$product = new Db();
 
 var_dump($product);
 
