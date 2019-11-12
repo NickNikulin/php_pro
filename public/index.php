@@ -1,6 +1,7 @@
 <?php
 
-//use app\models\{Product, Users};
+use app\engine\{Autoload,Db};
+use app\models\Product;
 
 include "../engine/Autoload.php";
 
