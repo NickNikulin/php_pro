@@ -4,16 +4,14 @@
 namespace app\models;
 use app\engine\Db;
 
-class Users extends Model
+class Feedback extends Model
 {
     public $id;
-    public $login;
-    public $pass;
-
+    public $subject;
+    public $description;
 
     public function getTableName()
     {
-        return 'users';
+        return 'feedback';
     }
 }
-
