@@ -4,8 +4,9 @@
 namespace app\models;
 
 use app\engine\Db;
+use app\interfaces\IModels;
 
-abstract class Model
+abstract class Model implements IModels
 {
     protected $db;
 

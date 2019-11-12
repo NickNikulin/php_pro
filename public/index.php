@@ -10,7 +10,7 @@ spl_autoload_register([new Autoload(), 'loadClass']);
 
 
 $product = new Product(new Db());
-$users = new Users(new Db());
+$users = new \app\models\Users(new Db());
 
 
 function foo(IModels $model) {
