@@ -12,7 +12,7 @@ abstract class Model implements IModels
 
     public function __construct(Db $db)
     {
-        $this->db = $db;
+        $this->db = new Db();
     }
 
     public function getOne ($id) {

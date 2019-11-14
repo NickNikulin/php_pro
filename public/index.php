@@ -1,7 +1,7 @@
 <?php
 
 use app\engine\{Autoload,Db};
-use app\models\{Product, Users};
+use app\models\{Product, Users, Feedback};
 use app\interfaces\IModels;
 //use app\config\config;
 
@@ -13,7 +13,7 @@ spl_autoload_register([new Autoload(), 'loadClass']);
 
 // $db = new Db();
 
-$product = new Product(new Db());
+$product = new \app\models\Feedback ();
 var_dump($product->getAll());
 
 //$product->getOne(1);
