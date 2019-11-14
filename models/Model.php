@@ -12,18 +12,18 @@ abstract class Model implements IModels
 
     public function __construct(Db $db)
     {
-        $this->db = $db;
+        $this->db = new Db();
     }
 
     public function getOne ($id) {
         $tableName = $this->getTableName();
-        $sql = "SELECT * FROM {$tableName} WHERE id = {$id}";
-        return $this->db->queryOne($sql);
+        $sql = "SELECT * FROM {$tableName} WHERE id = :id";
+        return $this->db->queryOne($sql, ['id' => $id]);
     }
 
     public function getAll () {
         $tableName = $this->getTableName();
-        $sql = "SELECT * FROM {$tableName} ";
+        $sql = "SELECT * FROM {$tableName}  ";
         return $this->db->queryAll($sql);
     }
 
