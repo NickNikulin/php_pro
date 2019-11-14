@@ -11,10 +11,14 @@ include "../config/config.php";
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
-$db = new Db();
+// $db = new Db();
 
-$product = new Product($db);
-$users = new \app\models\Users($db);
+$product = new Product(new Db());
+var_dump($product->getAll());
+
+//$product->getOne(1);
+
+//$users = new \app\models\Users($db);
 
 
 
